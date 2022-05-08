@@ -5,7 +5,7 @@
  */
 import '../chatview/index.js';
 import './view.js';
-import { HeadlinesPanel } from './panel.js';
+import { HeadlinesFeedList } from './feed-list.js';
 import { _converse, converse } from '@converse/headless/core';
 
 import './styles/headlines.scss';
@@ -25,6 +25,9 @@ converse.plugins.add('converse-headlines-view', {
     dependencies: ['converse-headlines', 'converse-chatview'],
 
     initialize () {
-        _converse.HeadlinesPanel = HeadlinesPanel;
+        _converse.HeadlinesFeedList = HeadlinesFeedList;
+
+        // Deprecated
+        _converse.HeadlinesPanel = HeadlinesFeedList;
     }
 });

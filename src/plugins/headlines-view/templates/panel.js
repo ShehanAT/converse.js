@@ -1,5 +1,5 @@
 import { html } from "lit";
-import tpl_headline_list from "templates/headline_list.js";
+import tpl_headline_list from "./headline_list.js";
 
 
 export default (o) => html`
